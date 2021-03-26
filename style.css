@@ -71,3 +71,35 @@ h1 {
 .tlacitka__zacit-hrat:hover {
   background-color: #0090e9;
 }
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+.rules {
+  text-align: left;
+  list-style: circle;
+  
+  list-style-position: outside;
+  padding: 1em 10em 0 10em;
+
+}
+
+li {padding: 0.1em;}
+
+header {
+  position: relative;
+}
+
+.title__rules {
+  position: sticky;
+  top: 0;
+}
+
+
+/* 
+.title__rules {
+  display: block; 
+  position: sticky;
+    margin-top: 0;
+    } */
+
+/* text-indent: 1em; */
+/* display: inline-block; */
