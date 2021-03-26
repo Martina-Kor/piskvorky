@@ -70,8 +70,8 @@ h1 {
   border-bottom: #283e50 solid 1px;
 }
 
-.tlacitka__pravidla:hover,
-.tlacitka__uvodni-strana {
+.tlacitka__pravidla,
+.tlacitka__uvodni-strana:hover {
   background-color: #1cbb96;
 }
 
