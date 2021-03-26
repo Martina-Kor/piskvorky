@@ -59,12 +59,14 @@ h1 {
   margin: 0px;
 }
 
-.tlacitka__pravidla {
+.tlacitka__pravidla,
+.tlacitka__uvodni-strana {
   background-color: #1fcca4;
   border-bottom: #283e50 solid 1px;
 }
 
-.tlacitka__pravidla:hover {
+.tlacitka__pravidla:hover,
+.tlacitka__uvodni-strana {
   background-color: #1cbb96;
 }
 
@@ -98,7 +100,6 @@ li {
 }
 
 figure {
-  border: thin #c0c0c0 solid;
   display: flex;
   flex-flow: column;
   padding: 2em;
@@ -106,6 +107,7 @@ figure {
   margin: auto;
 }
 
+/* border: thin #c0c0c0 solid; */
 .body__rules {
   width: 60vw;
   min-height: 100vh;
