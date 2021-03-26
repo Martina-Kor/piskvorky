@@ -1,3 +1,7 @@
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxx  MOBILE SIZE OPTIMATION  xxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
 html {
   box-sizing: border-box;
   padding: 0;
@@ -79,7 +83,6 @@ h1 {
   background-color: #0090e9;
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 .rules {
   display: block;
   text-align: left;
@@ -108,7 +111,7 @@ figure {
   display: flex;
   flex-flow: column;
   padding: 1em;
-  max-width: 90vw;
+  max-width: 80vw;
   margin: auto;
   font-size: 85%;
 }
@@ -135,4 +138,36 @@ figcaption {
   padding-top: 30px;
   margin-top: 2rem;
   font-family: 'Lobster', cursive;
+  font-size: 1er;
 }
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+TABLET SIZE OPTIMATION, breakpoint at 768px  
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+@media only screen and (min-width: 768px) {
+  .body__rules {
+    width: 60%;
+    margin: auto;
+    max-width: 100vw;
+  }
+
+  figure {
+    flex: 0 0 50%;
+    max-width: 50%;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+
+  .figure {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DESKTOP SIZE OPTIMATION, breakpoint at 1280px  
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+seems it works well as it is*/
