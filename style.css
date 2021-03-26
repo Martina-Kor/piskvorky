@@ -105,11 +105,20 @@ figure {
   padding: 2em;
   max-width: 60vw;
   margin: auto;
+  font-size: 80%;
+}
+
+figcaption {
+  padding: 1em 0 0.5em 0;
+  text-align: center;
+  display: block;
+  height: 80px;
+  font-style: italic;
 }
 
 /* border: thin #c0c0c0 solid; */
 .body__rules {
-  width: 60vw;
+  width: 90vw;
   min-height: 100vh;
   background-color: #283e50;
   border-radius: 6px 6px 0 0;
