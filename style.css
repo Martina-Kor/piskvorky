@@ -10,7 +10,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+html {
   background-image: linear-gradient(#615dad, #ffc8da);
   background-repeat: no-repeat;
   color: white;
@@ -42,6 +42,10 @@ h1 {
   margin: 20px;
 }
 
+.title__rules {
+  margin: 0;
+}
+
 .uvodni-strana__text p {
   margin: 0px 25px 25px 25px;
   font-size: 16px;
@@ -50,9 +54,9 @@ h1 {
 .tlacitka a {
   display: block;
   text-decoration: none;
-  color: white;   
+  color: white;
   padding: 15px 0;
-  margin: 0px; */
+  margin: 0px;
 }
 
 .tlacitka__pravidla {
@@ -74,25 +78,80 @@ h1 {
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 .rules {
+  display: block;
   text-align: left;
-  list-style: circle;
-  
-  list-style-position: outside;
-  padding: 1em 10em 0 10em;
-
 }
 
-li {padding: 0.1em;}
+/* Jak udělat nevyplněná kolečka u <ul>
+list-style: circle;
+list-style-position: outside; */
 
-header {
-  position: relative;
+li {
+  padding: 0.5em 4em 0 1em;
+  border-left: 2em;
+  margin-left: 4vw;
 }
 
+.rules__3 img {
+  filter: invert(100%);
+  height: 0.9em;
+}
+
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 2em;
+  max-width: 60vw;
+  margin: auto;
+}
+
+.body__rules {
+  width: 60vw;
+  min-height: 100vh;
+  background-color: #283e50;
+  border-radius: 6px 6px 0 0;
+  margin: auto;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+ */
+/* header {
+  display: block;
+  position: sticky;
+  top: 0;
+
+} */
+
+/* background-color: inherit; */
+
+/* background-color: #615dad; */
+/* opacity: 1; */
+/* 
 .title__rules {
   position: sticky;
   top: 0;
-}
-
+} */
 
 /* 
 .title__rules {
