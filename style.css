@@ -61,7 +61,7 @@ h1 {
 
 .tlacitka-rules {
   padding-bottom: 2rem;
-  background-color: #ffc8da;git a
+  background-color: #ffc8da;
 }
 
 .tlacitka__pravidla,
@@ -124,6 +124,11 @@ figcaption {
   display: block;
   height: 80px;
   font-style: italic;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
 }
 
 /* border: thin #c0c0c0 solid; */
