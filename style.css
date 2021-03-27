@@ -114,6 +114,8 @@ figure {
   max-width: 80vw;
   margin: auto;
   font-size: 85%;
+  width: 100%;
+  height: auto;
 }
 
 figcaption {
