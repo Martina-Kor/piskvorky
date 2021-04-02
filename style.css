@@ -14,7 +14,7 @@ html {
   box-sizing: inherit;
 }
 
-html {
+body {
   background-image: linear-gradient(#615dad, #ffc8da);
   background-repeat: no-repeat;
   color: white;
@@ -105,13 +105,14 @@ li {
 .rules__3 img {
   filter: invert(100%);
   height: 0.9em;
+  vertical-align: baseline;
 }
 
 figure {
   display: flex;
   flex-flow: column;
-  padding: 1em;
-  max-width: 80vw;
+  padding: 1.6rem;
+  max-width: 70vw;
   margin: auto;
   font-size: 85%;
 }
@@ -158,6 +159,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
     width: 70%;
     margin: auto;
     max-width: 100vw;
+    
   }
 
   figure {
@@ -166,6 +168,8 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
     width: 50%;
     box-sizing: border-box;
     padding: 1rem;
+
+}
   }
 
   .figure {
