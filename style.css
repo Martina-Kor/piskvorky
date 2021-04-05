@@ -145,7 +145,6 @@ figure img {
 .body__rules {
   width: 90vw;
   min-height: 100vh;
-  background-color: #283e50;
   border-radius: 6px 6px 0 0;
   margin: auto;
 }
@@ -273,9 +272,10 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
   flex-wrap: wrap;
   height: 80vmin;
   margin-top: 1rem;
+  border: solid black 1.5px;
 }
 
-.grid__row_ {
+.grid__row {
   width: 100%;
   text-align: center;
   display: flex;
@@ -285,6 +285,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 button {
   width: 10%;
+  flex-grow: 1;
   background: rgba(255, 255, 255, 0.3);
   border: 1.5px solid rgb(38, 28, 78);
 }
