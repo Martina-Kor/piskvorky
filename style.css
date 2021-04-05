@@ -186,3 +186,133 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 DESKTOP SIZE OPTIMATION, breakpoint at 1280px  
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 seems it works well as it is*/
+
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxx GAME xxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.game {
+  max-width: 80vmin;
+  margin: 3% 0;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.game__title {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.game__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
+}
+
+.game__player {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+  width: calc(((100% - 1rem) / 3) * 2);
+}
+
+.game__player--text {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 2%;
+}
+
+
+.game__player--circle {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  filter: invert(100%);
+}
+
+.game__icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: calc((100% - 1rem) / 3);
+}
+
+.game__icons a {
+  display: block;
+  margin: 0 3%;
+  padding: 3%;
+  border-radius: 5px;
+}
+
+
+.game__icons--index img,
+.game__icons--restart img {
+  width: 100%;
+}
+
+.game__icons--index {
+  background-color: #1fcca4;
+}
+
+.game__icons--index:hover,
+.game__icons--index:focus {
+  background-color: #1cbb96;
+}
+
+.game__icons--restart {
+  background-color: #0197f6;
+}
+
+.game__icons--restart:hover,
+.game__icons--restart:focus {
+  background-color: #0090e9;
+}
+
+.grid {
+  /* border: 2px solid black; */
+  /* border-right: none; */
+} 
+/* 
+.grid_row_ {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  padding: 0;
+  border-bottom: 2px solid black;
+} */
+/* 
+.grid:last-child {
+  border-bottom: none;
+}
+ 
+
+ 
+.grid:last-child {
+  border-bottom: none;
+}
+ */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxx MOBILE PHONE WIDTH xxxx  
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+button {
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-right: 2px solid black;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+button:hover,
+button:focus {
+  background: rgba(255, 255, 255, 0.4);
+}
+ */
