@@ -1,5 +1,6 @@
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxx  MOBILE SIZE OPTIMATION  xxxxxxx
+xxxxxxxxxx  1st homework: HOME PAGE xxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 html {
@@ -42,7 +43,7 @@ height: 620px; */
 
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 50px;
+  font-size: 3.8rem;
   letter-spacing: 1px;
   font-weight: normal;
   margin: 20px;
@@ -85,6 +86,10 @@ h1 {
 .tlacitka__zacit-hrat:hover {
   background-color: #0090e9;
 }
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxx 2nd homework: RULES xxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 .rules {
   display: block;
@@ -162,7 +167,6 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
     width: 70%;
     margin: auto;
     max-width: 100vw;
-    
   }
 
   figure {
@@ -171,15 +175,13 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
     width: 50%;
     box-sizing: border-box;
     padding: 1rem;
-
+  }
 }
-  }
 
-  .figure {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
-  }
+.figure {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -187,38 +189,27 @@ DESKTOP SIZE OPTIMATION, breakpoint at 1280px
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 seems it works well as it is*/
 
-
-
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxx GAME xxxxx
+xxxxxxxxxx 3rd homework: GAME xxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
 .game {
   max-width: 80vmin;
   margin: 3% 0;
   color: #ffffff;
   font-family: sans-serif;
-}
-
-.game__title {
-  margin: 0;
-  padding: 0;
-  font-family: 'Lobster', cursive;
-  font-weight: normal;
-  text-align: center;
-  font-size: 3rem;
-  line-height: 1.2;
+  margin: 2rem auto;
 }
 
 .game__header {
   display: flex;
   justify-content: space-between;
-  margin: 5% 0;
+  margin: 7% 0 7% 0;
 }
 
 .game__player {
   display: flex;
   align-items: center;
-  margin: 1em;
   width: calc(((100% - 1rem) / 3) * 2);
 }
 
@@ -226,14 +217,13 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
-  margin-right: 2%;
+  margin-right: 3%;
 }
-
 
 .game__player--circle {
   display: block;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
   filter: invert(100%);
 }
 
@@ -242,15 +232,17 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
   justify-content: flex-end;
   align-items: center;
   width: calc((100% - 1rem) / 3);
+  margin: 0;
 }
 
 .game__icons a {
   display: block;
-  margin: 0 3%;
-  padding: 3%;
-  border-radius: 5px;
-}
 
+  margin-left: 5%;
+  padding: 5% 7% 5% 7%;
+  border-radius: 5px;
+  align-self: baseline;
+}
 
 .game__icons--index img,
 .game__icons--restart img {
@@ -276,43 +268,28 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 }
 
 .grid {
-  /* border: 2px solid black; */
-  /* border-right: none; */
-} 
-/* 
-.grid_row_ {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vmin;
+  margin-top: 1rem;
+}
+
+.grid__row_ {
   width: 100%;
   text-align: center;
   display: flex;
   padding: 0;
-  border-bottom: 2px solid black;
-} */
-/* 
-.grid:last-child {
-  border-bottom: none;
+  margin: 0;
 }
- 
-
- 
-.grid:last-child {
-  border-bottom: none;
-}
- */
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxx MOBILE PHONE WIDTH xxxx  
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 button {
-  padding: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  border: none;
-  border-right: 2px solid black;
+  width: 10%;
   background: rgba(255, 255, 255, 0.3);
+  border: 1.5px solid rgb(38, 28, 78);
 }
 
 button:hover,
 button:focus {
   background: rgba(255, 255, 255, 0.4);
 }
- */
