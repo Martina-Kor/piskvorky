@@ -147,6 +147,7 @@ figure img {
   min-height: 100vh;
   border-radius: 6px 6px 0 0;
   margin: auto;
+  background-color: #283e50;
 }
 
 .title__rules {

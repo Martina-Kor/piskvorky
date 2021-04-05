@@ -89,104 +89,112 @@
       rel="stylesheet"
     />
   </head>
-  <body class="body__rules">
-    <header>
-      <h1 class="title__rules">Pravidla</h1>
-    </header>
-    <div>
-      <ol class="rules">
-        <li class="rules__1">Hra piškvorky je určena pro dva hráče.</li>
-        <li class="rules__2">
-          Hraje se na hrací ploše 10×10, tvořené poli ve tvaru čtverce.
-        </li>
-        <li class="rules__3">
-          Na začátku si hráči rozdělí role. Jeden bude hrát za kolečka
-          <img
-            class="rules__3--circle"
-            src="image/circle.svg"
-            alt="Obrázek kolečka"
-          />
-          , druhý bude hrát za křížky
+  <body>
+    <div class="body__rules">
+      <header>
+        <h1 class="title__rules">Pravidla</h1>
+      </header>
 
+      <div>
+        <ol class="rules">
+          <li class="rules__1">Hra piškvorky je určena pro dva hráče.</li>
+          <li class="rules__2">
+            Hraje se na hrací ploše 10×10, tvořené poli ve tvaru čtverce.
+          </li>
+          <li class="rules__3">
+            Na začátku si hráči rozdělí role. Jeden bude hrát za kolečka
+            <img
+              class="rules__3--circle"
+              src="image/circle.svg"
+              alt="Obrázek kolečka"
+            />
+            , druhý bude hrát za křížky
+
+            <img
+              class="rules__3--cross"
+              src="image/cross.svg"
+              alt="Obrázek křížku"
+            />
+            .
+          </li>
+          <li class="rules__4">
+            Losem se určí, kdo bude začínat. V naší aplikaci to vylosujeme za
+            vás.
+          </li>
+          <li class="rules__5">Hráči se střídají v tazích.</li>
+          <li class="rules__6">
+            Hráč, který je na tahu, umístí jeden ze svých symbolů na prázdné
+            pole na hrací ploše. Tj. hráč hrající za křížky umístí křížek, hráč
+            hrající za kolečka umístí kolečko.
+          </li>
+          <li class="rules__7">
+            Křížky a kolečka se umisťují dovnitř políček na hrací ploše.
+          </li>
+          <li class="rules__8">
+            Hráč, který umístí pět svých symbolů do jedné řady, vyhrává.
+          </li>
+          <li class="rules__9">
+            Výherní kombinací se rozumí pět symbolů ve směru vodorovném, svislém
+            nebo šikmém. Mezi pěti symboly tvořícími výherní kombinaci nesmí být
+            žádné prázdné pole ani pole obsazené soupeřovým symbolem.
+          </li>
+          <li class="rules__10">
+            Pokud hráči zaplní celou desku, aniž by někdo umístil pět svých
+            symbolů do jedné řady, hra končí remízou.
+          </li>
+        </ol>
+      </div>
+      <div class="figure">
+        <figure class="figure--3moves">
+          <img src="image/instructions-01.jpg" alt="Situace po třech tazích." />
+          <figcaption>Situace po třech tazích.</figcaption>
+        </figure>
+        <figure class="figure--4moves">
           <img
-            class="rules__3--cross"
-            src="image/cross.svg"
-            alt="Obrázek křížku"
+            src="image/instructions-02.jpg"
+            alt="Situace po čtyřech tazích."
           />
-          .
-        </li>
-        <li class="rules__4">
-          Losem se určí, kdo bude začínat. V naší aplikaci to vylosujeme za vás.
-        </li>
-        <li class="rules__5">Hráči se střídají v tazích.</li>
-        <li class="rules__6">
-          Hráč, který je na tahu, umístí jeden ze svých symbolů na prázdné pole
-          na hrací ploše. Tj. hráč hrající za křížky umístí křížek, hráč hrající
-          za kolečka umístí kolečko.
-        </li>
-        <li class="rules__7">
-          Křížky a kolečka se umisťují dovnitř políček na hrací ploše.
-        </li>
-        <li class="rules__8">
-          Hráč, který umístí pět svých symbolů do jedné řady, vyhrává.
-        </li>
-        <li class="rules__9">
-          Výherní kombinací se rozumí pět symbolů ve směru vodorovném, svislém
-          nebo šikmém. Mezi pěti symboly tvořícími výherní kombinaci nesmí být
-          žádné prázdné pole ani pole obsazené soupeřovým symbolem.
-        </li>
-        <li class="rules__10">
-          Pokud hráči zaplní celou desku, aniž by někdo umístil pět svých
-          symbolů do jedné řady, hra končí remízou.
-        </li>
-      </ol>
-    </div>
-    <div class="figure">
-      <figure class="figure--3moves">
-        <img src="image/instructions-01.jpg" alt="Situace po třech tazích." />
-        <figcaption>Situace po třech tazích.</figcaption>
-      </figure>
-      <figure class="figure--4moves">
-        <img src="image/instructions-02.jpg" alt="Situace po čtyřech tazích." />
-        <figcaption>Situace po čtyřech tazích.</figcaption>
-      </figure>
-      <figure class="figure--winningPosition--circle">
-        <img
-          src="image/instructions-03.jpg"
-          alt="Výherní pozice hráče s kolečky."
-        />
-        <figcaption>Výherní pozice hráče s kolečky.</figcaption>
-      </figure>
-      <figure class="figure--beforeWinning">
-        <img
-          src="image/instructions-04.jpg"
-          alt="Situace před výhrou, hráč už má 4 kolečka v řadě."
-        />
-        <figcaption>
-          V této situaci nikdo nevyhrává. Pokud je na tahu hráč s kolečky, může
-          přidat další kolečko do šikmé řady, kde už má 4 kolečka, a vyhraje.
-        </figcaption>
-      </figure>
-      <figure class="figure--winningPosition--cross">
-        <img
-          src="image/instructions-05.jpg"
-          alt="Výherní pozice hráče s křížky."
-        />
-        <figcaption>Výherní pozice hráče s křížky.</figcaption>
-      </figure>
-      <figure class="figure--winningPosition--circle">
-        <img
-          src="image/instructions-06.jpg"
-          alt="Ještě jedna výherní pozice hráče s kolečky."
-        />
-        <figcaption>Ještě jedna výherní pozice hráče s kolečky.</figcaption>
-      </figure>
-    </div>
-    <div class="tlacitka-rules">
-      <a class="tlacitka__uvodni-strana" href="index.html">Úvodní stránka</a>
-      <a class="tlacitka__zacit-hrat" href="hra.html" target="_blank"
-        >Začít hrát</a
-      >
+          <figcaption>Situace po čtyřech tazích.</figcaption>
+        </figure>
+        <figure class="figure--winningPosition--circle">
+          <img
+            src="image/instructions-03.jpg"
+            alt="Výherní pozice hráče s kolečky."
+          />
+          <figcaption>Výherní pozice hráče s kolečky.</figcaption>
+        </figure>
+        <figure class="figure--beforeWinning">
+          <img
+            src="image/instructions-04.jpg"
+            alt="Situace před výhrou, hráč už má 4 kolečka v řadě."
+          />
+          <figcaption>
+            V této situaci nikdo nevyhrává. Pokud je na tahu hráč s kolečky,
+            může přidat další kolečko do šikmé řady, kde už má 4 kolečka, a
+            vyhraje.
+          </figcaption>
+        </figure>
+        <figure class="figure--winningPosition--cross">
+          <img
+            src="image/instructions-05.jpg"
+            alt="Výherní pozice hráče s křížky."
+          />
+          <figcaption>Výherní pozice hráče s křížky.</figcaption>
+        </figure>
+        <figure class="figure--winningPosition--circle">
+          <img
+            src="image/instructions-06.jpg"
+            alt="Ještě jedna výherní pozice hráče s kolečky."
+          />
+          <figcaption>Ještě jedna výherní pozice hráče s kolečky.</figcaption>
+        </figure>
+      </div>
+      <div class="tlacitka-rules">
+        <a class="tlacitka__uvodni-strana" href="index.html">Úvodní stránka</a>
+        <a class="tlacitka__zacit-hrat" href="hra.html" target="_blank"
+          >Začít hrát</a
+        >
+      </div>
     </div>
   </body>
 </html>
