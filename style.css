@@ -290,6 +290,7 @@ button {
   flex-grow: 1;
   background: rgba(255, 255, 255, 0.3);
   border: 1.5px solid rgb(38, 28, 78);
+  transition: ease-in 0.15s background-size;
 }
 
 button:hover,
@@ -300,26 +301,18 @@ button:focus {
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxx 4th homework: JS script for hra.html xxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-
-.board__playing--circle {
-  /* display: block;
-  width: 1.4rem;
-  height: 1.4rem;
-  filter: invert(100%); */
+.btn--circle,
+.btn--circle:focus,
+.btn--circle:hover {
   background-image: url(image/circle.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75%;
 }
 
-.board__playing--cross {
-  /*   display: block;
-  width: 1.4rem;
-  height: 1.4rem;
-  filter: invert(100%); */
-}
-/* selektor tlacitka s modifikatorem pro vybrany circle */
-.board__playing--cross {
+.btn--cross,
+.btn--cross:focus,
+.btn--cross:hover {
   background-image: url(image/cross.svg);
   background-repeat: no-repeat;
   background-position: center;
