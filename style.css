@@ -263,7 +263,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
   background-color: #0090e9;
 }
 
-.grid {
+.board {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -272,7 +272,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
   border: solid black 1.5px;
 }
 
-.grid__row {
+.board__row {
   width: 100%;
   text-align: center;
   display: flex;
