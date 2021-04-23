@@ -213,5 +213,9 @@ const winner = (message) => {
   let yes = confirm(message);
   if (yes === true) {
     location.reload();
+  } else {
+    fields.forEach((field) => {
+      field.setAttribute('disabled', '');
+    });
   }
 };

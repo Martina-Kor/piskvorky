@@ -150,10 +150,4 @@ const playAgain = (message) => {
     location.reload();
   }
 };
-/* 
-const winner = (message) => {
-  let yes = confirm(message);
-  if (yes === true) {
-    location.reload();
-  }
-}; */
+
