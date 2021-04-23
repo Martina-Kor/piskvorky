@@ -29,10 +29,11 @@ const selectButton = (event) => {
     if (isWinningMove(field) === true) {
       endOfGame = 'cross';
       setTimeout(() => {
-        playAgain('Vyhrál křížek. Chcete hrát   znovu?');
+        playAgain('Vyhrál křížek. Chcete hrát znovu?');
       }, 200);
     }
   }
+};
 
 const btnSelected = document.querySelectorAll('button');
 // check: console.log(btnSelected.length);
