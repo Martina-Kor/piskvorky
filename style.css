@@ -301,18 +301,18 @@ button:focus {
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxx 4th homework: JS script for hra.html xxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-.btn--circle,
-.btn--circle:focus,
-.btn--circle:hover {
+.board__field--circle,
+.board__field--circle:focus,
+.board__field--circle:hover {
   background-image: url(image/circle.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75%;
 }
 
-.btn--cross,
-.btn--cross:focus,
-.btn--cross:hover {
+.board__field--cross,
+.board__field--cross:focus,
+.board__field--cross:hover {
   background-image: url(image/cross.svg);
   background-repeat: no-repeat;
   background-position: center;

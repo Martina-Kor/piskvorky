@@ -1,56 +1,59 @@
 'use strict';
 
-let playing = 'circle';
-let endOfGame = null;
+// ÚKOL 4
 
-let click = 0;
+// 4
+let playerTurn = 'circle';
 
+//5
 const playsElm = document.querySelector('.game__player--circle');
-//console.log(playsElm);
+console.log(playsElm);
 
-const selectButton = (event) => {
-  event.target.classList.add('btn--' + playing);
-  if (playing === 'circle') {
-    playing = 'cross';
+const fields = document.querySelectorAll('.board__field');
+console.log(fields.length);
+
+const playerChange = () => {
+  if (playerTurn === 'circle') {
+    playerTurn = 'cross';
     playsElm.src = 'image/cross.svg';
     playsElm.alt = 'Hraje křížek.';
-
-    if (isWinningMove(field) === true) {
-      endOfGame = 'circle';
-      setTimeout(() => {
-        playAgain('Vyhrálo kolečko. Chcete hrát znovu?');
-      }, 200);
-    }
   } else {
-    playing = 'circle';
+    playerTurn = 'circle';
     playsElm.src = 'image/circle.svg';
     playsElm.alt = 'Hraje kolečko.';
-
-    if (isWinningMove(field) === true) {
-      endOfGame = 'cross';
-      setTimeout(() => {
-        playAgain('Vyhrál křížek. Chcete hrát znovu?');
-      }, 200);
-    }
   }
 };
+//console.log(playerTurn);
 
-const btnSelected = document.querySelectorAll('button');
-// check: console.log(btnSelected.length);
+fields.forEach((field) => {
+  field.addEventListener('click', (e) => {
+    if (playerTurn === 'circle') {
+      e.target.classList.add('board__field--circle');
+    } else {
+      e.target.classList.add('board__field--cross');
+    }
+    e.target.setAttribute('disabled', '');
+    playerChange();
+    isWinningMove(e.target);
+    if (isWinningMove(e.target) === true) {
+      if (getSymbol(e.target) === 'circle') {
+        setTimeout(() => {
+          winner('Gratulujeme! Vítězem je kolečko. Chcete hrát znovu?');
+        }, 200);
+      } else if (getSymbol(e.target) === 'cross') {
+        setTimeout(() => {
+          winner('Gratulujeme! Vítězem je křížek. Chcete hrát znovu?');
+        }, 200);
+      }
+    }
+  });
+});
 
-for (let i = 0; i < btnSelected.length; i += 1) {
-  btnSelected[i].addEventListener('click', selectButton);
-}
+// ÚKOL 5
 
-//------------HOMEWORK no. 5 ---------------
-
-/* 1) Funkce getPosition(field), která pro dané políčko vrátí objekt s číslem řádku a sloupce. Pro levé horní políčko vrátí {row: 0, column: 0}, pro pravé dolní {row: 9, column: 9}, pro levé dolní {row: 9, column: 0}, … */
+// 3-i
 
 const boardSize = 10; // 10x10
-//console.log(boardSize);
-
-const fields = document.querySelectorAll('.board_field');
-//console.log(fields.length);
 
 const getPosition = (field) => {
   let fieldIndex = 0;
@@ -67,29 +70,25 @@ const getPosition = (field) => {
   };
 };
 
-//console.log(getPosition(fields[99]));
-
-/* 2) Funkce getField(row, column), která naopak pro číslo řádku a sloupce vrátí příslušný prvek.*/
+// 3-ii
 
 const getField = (row, column) => fields[row * boardSize + column];
 
-console.log(getField(2, 3));
-
-/* 3) Funkce getSymbol(field), která pro políčko s křížkem vrátí řetězec 'cross', pro kroužek 'circle' a pro neobsazené políčko hodnotu undefined. */
+// 3-iii
 
 const getSymbol = (field) => {
-  if (field.classList.contains('btn--cross')) {
+  // Název třídy přizpůsob tvému kódu.
+  if (field.classList.contains('board__field--cross')) {
     return 'cross';
-  } else if (field.classList.contains('btn--circle')) {
+  } else if (field.classList.contains('board__field--circle')) {
     return 'circle';
   }
 };
 
-/* 4) S použitím nachystaných funkcí zjistíme při každém tahu, jestli se nejedná o výherní. Nový kód navážeme na event listener ze čtvrtého úkolu.
-
-Vytvoříme funkci isWinningMove(field), která se podívá na symbol políčka a zjistí, jestli jich je v řádku nebo ve sloupci sousedících pět. Podle toho vrátí true nebo false. */
+// 4-i
 
 const symbolsToWin = 5;
+
 const isWinningMove = (field) => {
   const origin = getPosition(field);
   const symbol = getSymbol(field);
@@ -97,6 +96,7 @@ const isWinningMove = (field) => {
   let i;
 
   let inRow = 1; // Jednička pro právě vybrané políčko
+
   // Koukni doleva
   i = origin.column;
   while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
@@ -119,6 +119,7 @@ const isWinningMove = (field) => {
   }
 
   let inColumn = 1;
+
   // Koukni nahoru
   i = origin.row;
   while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
@@ -140,20 +141,77 @@ const isWinningMove = (field) => {
     return true;
   }
 
+  // Diagonála
+
+  let y;
+  let diagonalUpLeft = 1;
+
+  // koukni nahoru a doleva:
+  i = origin.row;
+  y = origin.column;
+
+  while (i > 0 && y > 0 && symbol === getSymbol(getField(i - 1, y - 1))) {
+    diagonalUpLeft++;
+    i--;
+    y--;
+  }
+
+  // koukni dolů a doprava:
+  i = origin.row;
+  y = origin.column;
+  while (
+    i < boardSize - 1 &&
+    y < boardSize - 1 &&
+    symbol === getSymbol(getField(i + 1, y + 1))
+  ) {
+    diagonalUpLeft++;
+    i++;
+    y++;
+  }
+
+  if (diagonalUpLeft >= symbolsToWin) {
+    return true;
+  }
+
+  let diagonalUpRight = 1;
+
+  // koukni nahoru a doprava:
+  i = origin.row;
+  y = origin.column;
+
+  while (
+    i > 0 &&
+    y < boardSize - 1 &&
+    symbol === getSymbol(getField(i - 1, y + 1))
+  ) {
+    diagonalUpRight++;
+    i--;
+    y++;
+  }
+
+  // koukni dolů a doleva:
+  i = origin.row;
+  y = origin.column;
+  while (
+    i < boardSize - 1 &&
+    y > 0 &&
+    symbol === getSymbol(getField(i + 1, y - 1))
+  ) {
+    diagonalUpRight++;
+    i++;
+    y--;
+  }
+
+  if (diagonalUpRight >= symbolsToWin) {
+    return true;
+  }
+
   return false;
 };
 
-// starts new game
-const playAgain = (message) => {
-  let yes = confirm(message);
-  if (yes === true) {
-    location.reload();
-  }
-};
-/* 
 const winner = (message) => {
   let yes = confirm(message);
   if (yes === true) {
     location.reload();
   }
-}; */
+};

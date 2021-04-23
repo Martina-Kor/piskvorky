@@ -14,10 +14,24 @@ const selectButton = (event) => {
     playing = 'cross';
     playsElm.src = 'image/cross.svg';
     playsElm.alt = 'Hraje křížek.';
+
+    if (isWinningMove(field) === true) {
+      endOfGame = 'circle';
+      setTimeout(() => {
+        playAgain('Vyhrálo kolečko. Chcete hrát znovu?');
+      }, 200);
+    }
   } else {
     playing = 'circle';
     playsElm.src = 'image/circle.svg';
     playsElm.alt = 'Hraje kolečko.';
+
+    if (isWinningMove(field) === true) {
+      endOfGame = 'cross';
+      setTimeout(() => {
+        playAgain('Vyhrál křížek. Chcete hrát znovu?');
+      }, 200);
+    }
   }
 };
 
@@ -129,18 +143,6 @@ const isWinningMove = (field) => {
   return false;
 };
 
-isWinningMove(event.target);
-if (isWinningMove(event.target) === true) {
-  if (getSymbol(event.target) === 'circle') {
-    setTimeout(() => {
-      playAgain('Gratulujeme! Vítězem je kolečko. Nová hra?');
-    }, 150);
-  } else if (getSymbol(event.target) === 'cross') {
-    setTimeout(() => {
-      playAgain('Gratulujeme! Vítězem je křížek. Nová hra?');
-    }, 150);
-  }
-}
 // starts new game
 const playAgain = (message) => {
   let yes = confirm(message);
@@ -148,3 +150,10 @@ const playAgain = (message) => {
     location.reload();
   }
 };
+/* 
+const winner = (message) => {
+  let yes = confirm(message);
+  if (yes === true) {
+    location.reload();
+  }
+}; */
